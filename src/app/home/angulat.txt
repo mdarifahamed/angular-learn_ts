@@ -1,0 +1,7 @@
+************ Data Binding*************
+    1. one way data Binding 
+    2. String Interpolation
+    3. Property Binding
+    4. Event Binding
+    5. Attribute Binding
+    6. Two way Data Binding
