@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  myValue: string = "X-yug";
+
+  name:string = "Goldsikka"
+
+  enabled: boolean = false;
+  yourValue:string = "Information"
+
 
 }

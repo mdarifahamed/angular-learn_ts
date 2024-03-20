@@ -5,3 +5,29 @@
     4. Event Binding
     5. Attribute Binding
     6. Two way Data Binding
+
+/*
+<input type="text" [value]="myValue">
+
+<div>
+    <input type="text" [disabled]="enabled" [value]="enabled ? name: yourValue" >
+
+</div>
+
+<div>
+    <input type="text" [disabled]="enabled" bind-value="enabled ? name: yourValue" >
+
+</div>
+
+
+export class HomeComponent {
+  myValue: string = "X-yug";
+
+  name:string = "Goldsikka"
+
+  enabled: boolean = false;
+  yourValue:string = "Information"
+
+
+}
+/*
