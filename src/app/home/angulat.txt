@@ -31,3 +31,17 @@ export class HomeComponent {
 
 }
 /*
+
+
+/*
+ng class
+
+<div class="maindiv" [ngClass]="manyclasses">Goldsika2</div>
+// ts code
+  manyclasses ={
+    name1 : true,
+    name2 : false,
+    name3 : true,
+  }
+
+/*
