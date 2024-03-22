@@ -17,10 +17,67 @@
 
 <!-- <div class="maindiv" [ngClass]="manyclasses">Goldsika2</div> -->
 
-<div class="maindiv" [ngStyle]="bgstyle">Goldsika2</div>
+<!-- <div class="maindiv" [ngStyle]="bgstyle">Goldsika2</div> -->
+
+<!--  If-else  -->
+
+<h1 *ngIf="show; then ifBlock else elseBlock"></h1>
+
+<ng-template #ifBlock>
+    <h1>If Condition</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h1>Else Condition</h1>
+</ng-template>
+
+<!-- else-If -->
+ <!-- // else-if not for angular use
+ ngIf === condition used -->
+
+<ng-template [ngIf]="color === 'red'">
+    <h1 style="color: red;">red Color</h1>
+
+</ng-template>
+
+<ng-template [ngIf]="color === 'green'">
+    <h1 style="color: green;">Green Color</h1>
+
+</ng-template>
+
+<ng-template [ngIf]="color === 'blue'">
+    <h1 style="color: blue;">bule Color</h1>
+
+</ng-template>
+
+<!-- Switch case angular -->
+
+<div [ngSwitch]="color2">
+    <h1 *ngSwitchCase="'red'" style="color: yellow;">Yellow Color</h1>
+    <h1 *ngSwitchCase="'brown'" style="color: brown;">Yellow Color</h1>
+    <h1 *ngSwitchCase="'red'" style="color: red;">Yellow Color</h1>
+    <h1 *ngSwitchCase="'purple'" style="color: purple;">Yellow Color</h1>
+    <h1 *ngSwitchCase="'orange'" style="color: orange;">Yellow Color</h1>
+    <h1 *ngSwitchDefault>no color</h1>
 
 
-<h1 *ngIf="show">
-    x-yug Lmt
-    
-</h1>
+</div>
+
+
+<!-- Loop in Angular -->
+
+<p *ngFor="let data of users">Name is:{{data}}</p>
+
+<p *ngFor="let data of userDeatails">{{data.name}} -- {{data.age}} --{{data.address}}</p>
+
+
+<ul *ngFor="let user of useremp">
+    <li>Name:{{user.name}}</li>
+    <li>phone :{{user.phone}}</li>
+    <li>Social Accounts</li>
+    <ul *ngFor="let account of user.socialacc">
+        <li>{{account}}</li>
+    </ul>
+
+</ul>
+
